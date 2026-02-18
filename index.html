@@ -1,27 +1,1129 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <title>Travis Beckwith Portfolio</title>
- </head>
- <body>
-   <nav>
-     <ul>
-       <li><a href=”/”>Home</a></li>
-       <li><a href=”/about”>About</a></li>
-       <li><a href=”/resume”>Resume</a></li>
-       <li><a href=”/blog”>Blog</a></li>
-     </ul>
-   </nav>
-   <div class=”container”>
-     <div class=”blurb”>
-       <h1>Hi, I am Travis Beckwith!</h1>
-       <p>This is my first page for my personal website!</a></p>
-     </div>
-   </div>
-   <footer>
-   <ul>
-     <li><a href=”mailto:Travis.Beckwith@gmail.com”>YOUREMAIL</a></li>
-   </ul>
-   </footer>
- </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travis Beckwith, Ph.D. — Neuroimaging Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --paper: #f5f2eb;
+    --paper-warm: #ede9e0;
+    --accent: #b85c38;
+    --accent-muted: #d4896b;
+    --rule: #c9c3b5;
+    --sidebar-bg: #1a1a2e;
+    --sidebar-text: #e8e4db;
+    --sidebar-muted: #9b96a0;
+    --sidebar-accent: #d4896b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    display: flex;
+    min-height: 100vh;
+    font-size: 16px;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 48px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sidebar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+  }
+
+  .sidebar-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sidebar-accent);
+    margin-bottom: 28px;
+  }
+
+  .sidebar-contact {
+    font-size: 0.78rem;
+    line-height: 2;
+    color: var(--sidebar-muted);
+    margin-bottom: 36px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+  }
+
+  .sidebar-contact a {
+    color: var(--sidebar-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .sidebar-contact a:hover { color: #fff; }
+
+  .sidebar-contact .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .contact-icon {
+    font-size: 0.7rem;
+    margin-top: 3px;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  .sidebar-nav {
+    flex: 1;
+  }
+
+  .nav-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 12px;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--sidebar-muted);
+    text-decoration: none;
+    padding: 6px 0;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+    margin-left: -12px;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .sidebar-nav a:hover,
+  .sidebar-nav a.active {
+    color: #fff;
+    border-left-color: var(--sidebar-accent);
+  }
+
+  .sidebar-metrics {
+    margin-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .metric {
+    text-align: center;
+  }
+
+  .metric-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--sidebar-accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .metric-lbl {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sidebar-muted);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    flex: 1;
+    padding: 60px 72px 80px;
+    max-width: 900px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    margin-bottom: 64px;
+    padding-bottom: 48px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .hero-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink-light);
+    max-width: 680px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    margin-bottom: 64px;
+    scroll-margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+    margin-left: 4px;
+  }
+
+  /* ── INTERESTS ── */
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .interest-card {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    padding: 20px;
+    border-top: 3px solid var(--accent);
+  }
+
+  .interest-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .interest-card p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--ink-light);
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exp-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .exp-meta {
+    padding-top: 3px;
+  }
+
+  .exp-dates {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .exp-org {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .exp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .exp-highlights {
+    list-style: none;
+    padding: 0;
+  }
+
+  .exp-highlights li {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--ink-light);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .exp-highlights li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-muted);
+    font-size: 0.75rem;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-item {
+    margin-bottom: 28px;
+    padding-left: 20px;
+    border-left: 3px solid var(--rule);
+  }
+
+  .edu-item.featured { border-left-color: var(--accent); }
+
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .edu-inst {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    margin-bottom: 4px;
+  }
+
+  .edu-dates {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .edu-note {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+  }
+
+  .skill-group {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+
+  .skill-group:nth-child(even) { border-right: none; }
+  .skill-group:nth-last-child(-n+2) { border-bottom: none; }
+
+  .skill-group-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .skill-group p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--ink-light);
+  }
+
+  /* ── PUBLICATIONS ── */
+  .pub-item {
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--rule);
+    transition: border-left-color 0.2s;
+  }
+
+  .pub-item:hover { border-left-color: var(--accent); }
+
+  .pub-authors {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  .pub-authors strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .pub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .pub-venue {
+    font-size: 0.75rem;
+    color: var(--accent-muted);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .pub-venue a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .pub-venue a:hover { text-decoration: underline; }
+
+  /* ── SECTION: service, honors ── */
+  .simple-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .simple-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ink-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .simple-list li:last-child { border-bottom: none; }
+
+  .list-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-muted);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  /* ── TAG ── */
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    color: var(--ink-light);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent-muted);
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero, section {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  section:nth-child(2) { animation-delay: 0.05s; }
+  section:nth-child(3) { animation-delay: 0.10s; }
+  section:nth-child(4) { animation-delay: 0.15s; }
+  section:nth-child(5) { animation-delay: 0.20s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    body { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      min-width: unset;
+      height: auto;
+      position: static;
+      padding: 32px 24px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .sidebar-nav { display: none; }
+    .main { padding: 40px 24px; }
+    .hero h1 { font-size: 2.6rem; }
+    .interests-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div>
+    <div class="sidebar-name">Travis Beckwith, Ph.D.</div>
+    <div class="sidebar-title">Neuroimaging Scientist</div>
+  </div>
+
+  <div class="sidebar-contact">
+    <div class="contact-row">
+      <span class="contact-icon">✉</span>
+      <a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">◎</span>
+      <a href="https://orcid.org/0000-0001-6128-8464" target="_blank">ORCID</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">⌁</span>
+      <a href="https://scholar.google.com/citations?user=wolY848AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">in</span>
+      <a href="https://www.linkedin.com/in/travis-beckwith-phd" target="_blank">LinkedIn</a>
+    </div>
+    <div class="contact-row" style="margin-top:6px;">
+      <span class="contact-icon">◌</span>
+      <span>Bloomington, IN 47408</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-label">Contents</div>
+    <a href="#summary">Summary</a>
+    <a href="#interests">Research Interests</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Technical Skills</a>
+    <a href="#publications">Publications</a>
+    <a href="#presentations">Presentations</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#honors">Honors</a>
+    <a href="#service">Service</a>
+  </nav>
+
+  <div class="sidebar-metrics">
+    <div class="metric">
+      <span class="metric-val">370</span>
+      <span class="metric-lbl">Citations</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">10</span>
+      <span class="metric-lbl">h-index</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">11</span>
+      <span class="metric-lbl">Papers</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Curriculum Vitae</div>
+    <h1>Travis<br>Beckwith</h1>
+    <p class="hero-summary">Neuroimaging scientist with 15+ years developing multimodal MRI analysis pipelines across academic research environments — from childhood lead exposure and air pollution to sports neurotrauma and AI model development.</p>
+  </div>
+
+  <!-- SUMMARY -->
+  <section id="summary">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Professional Summary</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p style="font-size:0.92rem; line-height:1.85; color:var(--ink-light);">
+      Principal neuroimaging analyst for three NIH-funded longitudinal cohorts, providing technical expertise in fMRI, DTI, MRS, and volumetric analysis across interdisciplinary research teams. Certified Siemens 3T Prisma scanner operator with hands-on experience in data acquisition, protocol implementation, and quality assurance. Proficient in FSL, AFNI, FreeSurfer, SPM, and fMRIPrep, with demonstrated experience deploying containerized workflows on SLURM-based HPC infrastructure and managing BIDS-formatted datasets. Currently applying domain expertise to AI model development, with growing familiarity in machine learning and deep-learning approaches.
+    </p>
+
+    <div class="tag-row">
+      <span class="tag">fMRI</span>
+      <span class="tag">DTI</span>
+      <span class="tag">MRS</span>
+      <span class="tag">fMRIPrep</span>
+      <span class="tag">FSL</span>
+      <span class="tag">AFNI</span>
+      <span class="tag">FreeSurfer</span>
+      <span class="tag">BIDS</span>
+      <span class="tag">SLURM / HPC</span>
+      <span class="tag">Docker / Singularity</span>
+      <span class="tag">Python</span>
+      <span class="tag">R</span>
+      <span class="tag">MATLAB</span>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Research Interests</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <h3>Neuroimaging Methods &amp; Pipeline Development</h3>
+        <p>Design, optimization, and validation of multimodal MRI analysis workflows for structural, functional, and diffusion imaging.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Brain–Behavior Relationships</h3>
+        <p>Neural mechanisms underlying cognitive and behavioral outcomes across environmental health, neurotrauma, and clinical populations.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Applied Neuroscience &amp; Computational Approaches</h3>
+        <p>Integration of emerging analytic techniques — including AI and machine learning — into neuroimaging research infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Professional Experience</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">May 2025–<br>Present</span>
+        <div class="exp-org">MetaBrain Labs Inc.</div>
+      </div>
+      <div>
+        <div class="exp-title">Neurotechnology Adviser</div>
+        <ul class="exp-highlights">
+          <li>Provide research methodology and neuroscience consultation to an early-stage neurotechnology startup developing an AI-powered cognitive performance platform.</li>
+          <li>Led research methodology design for pilot study protocol, including study design, outcome measure selection, and human subjects research considerations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">Sep 2024–<br>Present</span>
+        <div class="exp-org">Outlier AI</div>
+      </div>
+      <div>
+        <div class="exp-title">Subject Matter Expert</div>
+        <ul class="exp-highlights">
+          <li>Contribute domain expertise in neuroscience and biomedical sciences to AI model development through content creation, quality evaluation, and multimodal training initiatives.</li>
+          <li>Author expert-level scientific prompts and custom evaluation rubrics testing AI reasoning across STEM domains.</li>
+          <li>Achieved "Oracle" contributor status recognizing sustained high-quality performance across 10+ projects over 14-month tenure.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2023–2024</span>
+        <div class="exp-org">Indiana University, Bloomington — Clinical Neurotrauma Lab</div>
+      </div>
+      <div>
+        <div class="exp-title">Postdoctoral Research Fellow</div>
+        <ul class="exp-highlights">
+          <li>Developed and executed task-based fMRI analysis pipeline using fMRIPrep and AFNI for N-back working memory paradigm in longitudinal sports injury cohort.</li>
+          <li>Deployed containerized fMRIPrep workflows via Singularity on SLURM, managing BIDS-formatted datasets and batch processing.</li>
+          <li>Acquired neuroimaging data as certified Level 1 MRI scanner operator on Siemens 3T Prisma.</li>
+          <li>Led manuscript preparation examining ADHD as a moderating variable in cognitive outcomes following subconcussive head impacts.</li>
+          <li>Trained graduate students on neuroimaging software, command-line fundamentals, and analysis procedures.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2018–2021</span>
+        <div class="exp-org">University of Cincinnati College of Medicine — Dept. of Environmental Health</div>
+      </div>
+      <div>
+        <div class="exp-title">Postdoctoral Research Fellow</div>
+        <ul class="exp-highlights">
+          <li>Served as principal neuroimaging analyst for three concurrent NIH-funded longitudinal cohorts, developing multimodal pipelines for structural MRI, fMRI, DTI, and MRS data.</li>
+          <li>Designed and standardized quality control procedures across multimodal datasets including QC summary reports, outlier flagging, and subject-level documentation.</li>
+          <li>Independently initiated cortical thickness analysis approach for air pollution cohort, resulting in first-author publication and CCHMC annual research report recognition.</li>
+          <li>Authored and co-authored six peer-reviewed publications on environmental impacts on brain development.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2015–2017</span>
+        <div class="exp-org">Cincinnati Children's Hospital Medical Center — Imaging Research Center</div>
+      </div>
+      <div>
+        <div class="exp-title">Postdoctoral Research Fellow</div>
+        <ul class="exp-highlights">
+          <li>Provided neuroimaging analysis expertise for interdisciplinary projects using structural MRI, DTI, MRS, and fMRI across multiple concurrent studies.</li>
+          <li>Served as primary methodological resource for software and pipeline selection, advising PIs on tool suitability.</li>
+          <li>Authored technical documentation for MRI_Analysis_Calculator ImageJ plugin adopted for ongoing lab use.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2008–2015</span>
+        <div class="exp-org">University of Cincinnati College of Medicine — Neuroscience Graduate Program</div>
+      </div>
+      <div>
+        <div class="exp-title">Graduate Research Assistant</div>
+        <ul class="exp-highlights">
+          <li>Led multiple research projects investigating childhood lead exposure effects on neurodevelopment using multimodal MRI.</li>
+          <li>Developed standardized templates and automated batch processing procedures for rodent MRI data.</li>
+          <li>Co-authored five peer-reviewed publications, two review articles, and one book chapter.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Education</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="edu-item featured">
+      <div class="edu-degree">Ph.D., Neuroscience</div>
+      <div class="edu-inst">University of Cincinnati, Cincinnati, OH</div>
+      <div class="edu-dates">2008–2015</div>
+      <div class="edu-note">Dissertation: "A Magnetic Resonance Imaging Study of the Developmental Consequences of Childhood Lead Exposure in Adulthood"</div>
+    </div>
+
+    <div class="edu-item featured">
+      <div class="edu-degree">B.A., Psychology &amp; Neuroscience &nbsp;|&nbsp; B.F.A., Creative Writing &amp; English</div>
+      <div class="edu-inst">Bowling Green State University, Bowling Green, OH</div>
+      <div class="edu-dates">2001–2007</div>
+      <div class="edu-note">Graduated <em>cum laude</em> with University and English Honors</div>
+    </div>
+
+    <div style="margin-top:28px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Additional Training</div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Post-Baccalaureate Certificate — Clinical and Translational Research</div>
+        <div class="edu-inst">University of Cincinnati College of Medicine</div>
+        <div class="edu-dates">2018–2019</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Preparing Future Faculty Program</div>
+        <div class="edu-inst">University of Cincinnati</div>
+        <div class="edu-dates">2012–2013</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">CONN Toolbox Functional Connectivity Workshop</div>
+        <div class="edu-inst">Neuroimaging Methods Training</div>
+        <div class="edu-dates">2015</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Technical Skills</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-name">Neuroimaging Platforms</div>
+        <p>FSL (incl. MELODIC) · AFNI · SPM (incl. CAT12) · FreeSurfer · fMRIPrep · CONN · ImageJ</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Modalities</div>
+        <p>fMRI (task-based &amp; resting-state) · DWI/DTI · MRS · Structural/Volumetric · Surface-based morphometry</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Programming &amp; Scripting</div>
+        <p>Python · R · MATLAB · Bash/Shell scripting · SAS</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Statistical Methods</div>
+        <p>GLM · Mixed/multilevel models · Longitudinal analysis · Multiple comparisons correction · Machine learning</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Data Management &amp; Reproducibility</div>
+        <p>BIDS format · DICOM conversion (dcm2niix) · Git/GitHub · Docker · Singularity/Apptainer · SLURM</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">MRI Operations</div>
+        <p>Siemens 3T Prisma (Level 1 certified, 2023) · syngo platform · Protocol implementation · Human subjects scanning</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Publications</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Peer-Reviewed Journals</div>
+
+    <div class="pub-item">
+      <div class="pub-authors"><strong>Beckwith, T.J.</strong>, Dietrich, K.N., Wright, J.P., Altaye, M. and Cecil, K.M.</div>
+      <div class="pub-title">Criminal arrests associated with reduced regional brain volumes in an adult population with documented childhood lead exposure.</div>
+      <div class="pub-venue">Environmental Research, 201, p.111559 (2021) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.envres.2021.111559" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors"><strong>Beckwith, T.</strong>, Cecil, K.M., Altaye, M., Severs, R., Wolf, C., Percy, Z., Maloney, T., Yolton, K., LeMasters, G., Ryan, P.H.</div>
+      <div class="pub-title">Reduced Cortical Thickness Associated with Traffic-Related Air Pollution in a Longitudinally Studied Pediatric Cohort.</div>
+      <div class="pub-venue">PLoS One 15 (1), e0228092 (2020) &nbsp;·&nbsp; <a href="https://doi.org/10.1371/journal.pone.0228092" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Fleck, D.E., Eliassen, J.C., Guerdjikova, A.I., ... <strong>Beckwith, T.</strong>, et al.</div>
+      <div class="pub-title">Effect of Lisdexamfetamine on Emotional Network Brain Dysfunction in Binge Eating Disorder.</div>
+      <div class="pub-venue">Psychiatry Research: Neuroimaging 286, 53–59 (2019) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.pscychresns.2019.03.003" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Brunst, K.J., Ryan, P.H., Altaye, M., Yolton, K., Maloney, T., <strong>Beckwith, T.</strong>, LeMasters, G., Cecil, K.M.</div>
+      <div class="pub-title">Myo-inositol mediates the effects of traffic-related air pollution on generalized anxiety symptoms at age 12 years.</div>
+      <div class="pub-venue">Environmental Research 175, 71–78 (2019) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.envres.2019.05.009" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Raghubar, K.P., Lamba, M., Cecil, K., Yeates, K.O., Mahone, E.M., Limke, C., Grosshans, D., <strong>Beckwith, T.J.</strong>, Ris, M.D.</div>
+      <div class="pub-title">Dose-volume Metrics and their Relation to Memory Performance in Pediatric Brain Tumor Patients: A Preliminary Study.</div>
+      <div class="pub-venue">Pediatric Blood &amp; Cancer 65, e27245 (2018) &nbsp;·&nbsp; <a href="https://doi.org/10.1002/pbc.27245" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors"><strong>Beckwith, T.J.</strong>, Dietrich, K.N., Wright, J.P., Altaye, M., Cecil, K.M.</div>
+      <div class="pub-title">Reduced Regional Volumes Associated with Total Psychopathy Scores in an Adult Population with Childhood Lead Exposure.</div>
+      <div class="pub-venue">NeuroToxicology 67, 1–26 (2018) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.neuro.2018.04.004" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Lindquist, D.M., <strong>Beckwith, T.</strong>, Cecil, K.M., et al.</div>
+      <div class="pub-title">Prenatal and Early Postnatal Lead Exposure in Mice: Neuroimaging Findings.</div>
+      <div class="pub-venue">Quantitative Imaging in Medicine and Surgery 5 (4), 511–518 (2015) &nbsp;·&nbsp; <a href="https://doi.org/10.3978/j.issn.2223-4292.2015.07.01" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Webber, E.S., Mankin, D., McGraw, J., <strong>Beckwith, T.J.</strong>, Cromwell, H.C.</div>
+      <div class="pub-title">Ultrasonic Vocalizations, Predictability and Sensorimotor Gating in the Rat.</div>
+      <div class="pub-venue">Behavioural Brain Research 253, 32–41 (2013) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.bbr.2013.07.013" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Gitelman, D., Klein-Gitelman, M.S., Ying, J., ... <strong>Beckwith, T.</strong>, et al.</div>
+      <div class="pub-title">Brain Morphometric Changes Associated with Child-Onset Systemic Lupus Erythematosus and Neurocognitive Deficit.</div>
+      <div class="pub-venue">Arthritis &amp; Rheumatism 65 (8), 2190–2200 (2013) &nbsp;·&nbsp; <a href="https://doi.org/10.1002/art.38009" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Webber, E.S., Harmon, K.M., <strong>Beckwith, T.J.</strong>, Peña, S., Burgdorf, J., Panksepp, J., Cromwell, H.C.</div>
+      <div class="pub-title">Selective Breeding for 50 kHz Ultrasonic Vocalization Emission Produces Alterations in the Ontogeny and Regulation of Rough-and-Tumble Play.</div>
+      <div class="pub-venue">Behavioural Brain Research 229 (1), 138–44 (2012) &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.bbr.2012.01.012" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Harmon, K.M., Greenwald, M., <strong>Beckwith, T.J.</strong>, McFarland, A.M., Cromwell, H.C.</div>
+      <div class="pub-title">The Effects of Prenatal Stress on Motivation in the Rat Pup.</div>
+      <div class="pub-venue">Stress 12 (3), 250–8 (2009) &nbsp;·&nbsp; <a href="https://doi.org/10.1080/10253890802367265" target="_blank">DOI</a></div>
+    </div>
+
+    <div style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Book Chapters &amp; Reviews</div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Cecil, K.M., <strong>Beckwith, T.J.</strong></div>
+      <div class="pub-title">A Toxicological Model of Frontal Lobe Injury: Childhood Lead Exposure. In: Frontal Lobe: Anatomy, Functions and Injuries. Nova Science Publishers, 57–78.</div>
+      <div class="pub-venue">Book Chapter (2013)</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors"><strong>Beckwith, T.</strong>, Cecil, K.M.</div>
+      <div class="pub-title">Acquired White Matter Injury: Infection and Inflammatory Processes.</div>
+      <div class="pub-venue">Journal of Pediatric Neuroradiology 2 (1), 97–108 (2013) &nbsp;·&nbsp; <a href="https://doi.org/10.3233/PNR-13050" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-authors">Cecil, K.M., <strong>Beckwith, T.</strong></div>
+      <div class="pub-title">Advanced Magnetic Resonance Techniques for Evaluating White Matter.</div>
+      <div class="pub-venue">Journal of Pediatric Neuroradiology 2 (1), 3–15 (2013) &nbsp;·&nbsp; <a href="https://doi.org/10.3233/PNR-13043" target="_blank">DOI</a></div>
+    </div>
+
+    <div style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Manuscripts in Preparation</div>
+    <div class="pub-item">
+      <div class="pub-authors"><strong>Beckwith, T.</strong>, Nowak, M., Kawata, K.</div>
+      <div class="pub-title">Role of ADHD Diagnosis on Working Memory Before and After Repetitive Subconcussive Head Impacts: A Pilot Study</div>
+      <div class="pub-venue">In preparation</div>
+    </div>
+  </section>
+
+  <!-- PRESENTATIONS -->
+  <section id="presentations">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Selected Presentations</h2>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="simple-list">
+      <li>
+        <span>"Childhood Lead Exposure: Influences on Adult Brain and Behavior." Epidemiology Seminar Series, Dept. of Environmental Health, University of Cincinnati</span>
+        <span class="list-year">2020</span>
+      </li>
+      <li>
+        <span>"Childhood Lead Exposure: Influences on the Brain and Behavior in Adulthood." MECEH Training Program, University of Cincinnati</span>
+        <span class="list-year">2019</span>
+      </li>
+      <li>
+        <span>"Brain Differences Associated with Traffic-Related Air Pollution in a Longitudinally Studied Pediatric Cohort." MECEH Training Program, University of Cincinnati</span>
+        <span class="list-year">2018</span>
+      </li>
+      <li>
+        <span>Adult measures of criminality correlated with reduced regional brain volumes in childhood lead exposure cohort. [Conference Proceeding] Neurotoxicology and Teratology, 79</span>
+        <span class="list-year">2020</span>
+      </li>
+      <li>
+        <span>Traffic-Related Air Pollution Associated with Altered Neuroimaging Outcomes. American Society of Neuroradiology Annual Meeting, Las Vegas, NV. [Electronic Poster]</span>
+        <span class="list-year">2020</span>
+      </li>
+      <li>
+        <span>Traffic-Related Air Pollution Associated with Reduced Cortical Thickness and Altered White Matter Organization. ISMRM 25th Annual Meeting, Honolulu, HI. [Oral Presentation]</span>
+        <span class="list-year">2017</span>
+      </li>
+      <li>
+        <span>Adult Measures of Psychopathy in a Cohort with Childhood Lead Exposure. American Society of Neuroradiology Annual Meeting, Washington, DC. [Electronic Poster eP-73]</span>
+        <span class="list-year">2016</span>
+      </li>
+    </ul>
+    <p style="font-size:0.78rem;color:var(--ink-light);margin-top:16px;font-style:italic;">14 additional conference abstracts and posters presented at major scientific meetings (2012–2019). Complete list available upon request.</p>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Teaching &amp; Training</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2015–2024</span>
+        <div class="exp-org">Multiple institutions</div>
+      </div>
+      <div>
+        <div class="exp-title">Neuroimaging Methods Training</div>
+        <ul class="exp-highlights">
+          <li>Individual and small-group training for graduate and summer research students on FSL, AFNI, FreeSurfer, and ImageJ.</li>
+          <li>Authored technical processing manual for MRI_Analysis_Calculator ImageJ plugin, standardizing procedures for lab use.</li>
+          <li>Provided ongoing methodology consultation on analysis approaches, software selection, and data management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-dates">2011–2013</span>
+        <div class="exp-org">University of Cincinnati / Howard Hughes Medical Institute — ExSEL Program</div>
+      </div>
+      <div>
+        <div class="exp-title">Teaching Assistant</div>
+        <ul class="exp-highlights">
+          <li>Developed and delivered STEM curriculum including presentations, lab exercises, and interactive activities for 20 high school students.</li>
+          <li>Mentored and supervised 4 graduate teaching assistants on classroom management and teaching strategies.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONORS -->
+  <section id="honors">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Honors &amp; Awards</h2>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="simple-list">
+      <li>
+        <span>Most-Shared Findings, Cincinnati Children's Hospital Medical Center Research Horizons Blog</span>
+        <span class="list-year">Jan 2020</span>
+      </li>
+      <li>
+        <span>Featured Research, Dept. of Radiology, CCHMC Annual Report — "Reduced Cortical Thickness Associated with Traffic-Related Air Pollution"</span>
+        <span class="list-year">2020</span>
+      </li>
+      <li>
+        <span>NIEHS T-32 Training Grant Fellowship (T32-ES10957) — Molecular Epidemiology in Children's Environmental Health Program</span>
+        <span class="list-year">2018–2020</span>
+      </li>
+      <li>
+        <span>Neuroscience Graduate Program Fellowship, University of Cincinnati College of Medicine</span>
+        <span class="list-year">2008–2015</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2>Service &amp; Leadership</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Grant Review</div>
+    <ul class="simple-list" style="margin-bottom:24px;">
+      <li>
+        <span>Pilot Project Program Reviewer, Center for Integrative Environmental Health Sciences (CIEHS) | NIEHS P30, University of Louisville</span>
+        <span class="list-year">2020</span>
+      </li>
+      <li>
+        <span>Poster Session Judge, 40th Annual Graduate Student Research Forum, University of Cincinnati College of Medicine</span>
+        <span class="list-year">2019</span>
+      </li>
+    </ul>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Ad Hoc Manuscript Reviewer</div>
+    <div style="font-size:0.85rem;color:var(--ink-light);line-height:1.9;">
+      Environment International &nbsp;·&nbsp; NeuroImage &nbsp;·&nbsp; Physiology &amp; Behavior &nbsp;·&nbsp; Psychiatry Research: Neuroimaging &nbsp;·&nbsp; The Lancet Planetary Health
+    </div>
+
+    <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Professional Affiliations</div>
+    <div style="font-size:0.85rem;color:var(--ink-light);">Indiana Academy of Science &nbsp;·&nbsp; Society for Neuroscience</div>
+  </section>
+
+  <footer>
+    <span>Travis Beckwith, Ph.D. — Neuroimaging Scientist</span>
+    <span>Bloomington, IN &nbsp;·&nbsp; Updated February 2026</span>
+  </footer>
+
+</main>
+
+<script>
+  // Active nav highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
 </html>
