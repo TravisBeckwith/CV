@@ -6,566 +6,22 @@
 <title>Travis Beckwith, Ph.D. — Neuroimaging Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #1a1a2e;
-    --ink-light: #3d3d5c;
-    --paper: #f5f2eb;
-    --paper-warm: #ede9e0;
-    --accent: #b85c38;
-    --accent-muted: #d4896b;
-    --rule: #c9c3b5;
-    --sidebar-bg: #1a1a2e;
-    --sidebar-text: #e8e4db;
-    --sidebar-muted: #9b96a0;
-    --sidebar-accent: #d4896b;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Source Serif 4', Georgia, serif;
-    background: var(--paper);
-    color: var(--ink);
-    display: flex;
-    min-height: 100vh;
-    font-size: 16px;
-  }
-
-  /* ── SIDEBAR ── */
-  .sidebar {
-    width: 280px;
-    min-width: 280px;
-    background: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 48px 32px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .sidebar-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.55rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #fff;
-    letter-spacing: -0.01em;
-    margin-bottom: 4px;
-  }
-
-  .sidebar-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--sidebar-accent);
-    margin-bottom: 28px;
-  }
-
-  .sidebar-contact {
-    font-size: 0.78rem;
-    line-height: 2;
-    color: var(--sidebar-muted);
-    margin-bottom: 36px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-  }
-
-  .sidebar-contact a {
-    color: var(--sidebar-accent);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .sidebar-contact a:hover { color: #fff; }
-
-  .sidebar-contact .contact-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 2px;
-  }
-
-  .contact-icon {
-    font-size: 0.7rem;
-    margin-top: 3px;
-    opacity: 0.6;
-    flex-shrink: 0;
-  }
-
-  .sidebar-nav {
-    flex: 1;
-  }
-
-  .nav-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 12px;
-  }
-
-  .sidebar-nav a {
-    display: block;
-    font-size: 0.82rem;
-    color: var(--sidebar-muted);
-    text-decoration: none;
-    padding: 6px 0;
-    border-left: 2px solid transparent;
-    padding-left: 12px;
-    margin-left: -12px;
-    transition: all 0.2s;
-    letter-spacing: 0.01em;
-  }
-
-  .sidebar-nav a:hover,
-  .sidebar-nav a.active {
-    color: #fff;
-    border-left-color: var(--sidebar-accent);
-  }
-
-  .sidebar-metrics {
-    margin-top: 32px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 24px;
-    display: flex;
-    gap: 20px;
-  }
-
-  .metric {
-    text-align: center;
-  }
-
-  .metric-val {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--sidebar-accent);
-    display: block;
-    line-height: 1;
-  }
-
-  .metric-lbl {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--sidebar-muted);
-    margin-top: 4px;
-    display: block;
-  }
-
-  /* ── MAIN ── */
-  .main {
-    flex: 1;
-    padding: 60px 72px 80px;
-    max-width: 900px;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    margin-bottom: 64px;
-    padding-bottom: 48px;
-    border-bottom: 2px solid var(--ink);
-    position: relative;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: var(--accent);
-  }
-
-  .hero-eyebrow {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 24px;
-  }
-
-  .hero-summary {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--ink-light);
-    max-width: 680px;
-    font-weight: 300;
-    font-style: italic;
-  }
-
-  /* ── SECTIONS ── */
-  section {
-    margin-bottom: 64px;
-    scroll-margin-top: 40px;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-
-  .section-num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-  }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-
-  .section-rule {
-    flex: 1;
-    height: 1px;
-    background: var(--rule);
-    margin-left: 4px;
-  }
-
-  /* ── INTERESTS ── */
-  .interests-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .interest-card {
-    background: var(--paper-warm);
-    border: 1px solid var(--rule);
-    padding: 20px;
-    border-top: 3px solid var(--accent);
-  }
-
-  .interest-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.92rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    line-height: 1.3;
-    color: var(--ink);
-  }
-
-  .interest-card p {
-    font-size: 0.8rem;
-    line-height: 1.6;
-    color: var(--ink-light);
-  }
-
-  /* ── EXPERIENCE ── */
-  .exp-item {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 24px;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .exp-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .exp-meta {
-    padding-top: 3px;
-  }
-
-  .exp-dates {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.03em;
-    line-height: 1.5;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .exp-org {
-    font-size: 0.75rem;
-    color: var(--ink-light);
-    line-height: 1.4;
-    font-style: italic;
-  }
-
-  .exp-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-
-  .exp-highlights {
-    list-style: none;
-    padding: 0;
-  }
-
-  .exp-highlights li {
-    font-size: 0.875rem;
-    line-height: 1.7;
-    color: var(--ink-light);
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 6px;
-  }
-
-  .exp-highlights li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--accent-muted);
-    font-size: 0.75rem;
-  }
-
-  /* ── EDUCATION ── */
-  .edu-item {
-    margin-bottom: 28px;
-    padding-left: 20px;
-    border-left: 3px solid var(--rule);
-  }
-
-  .edu-item.featured { border-left-color: var(--accent); }
-
-  .edu-degree {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .edu-inst {
-    font-size: 0.85rem;
-    color: var(--ink-light);
-    margin-bottom: 4px;
-  }
-
-  .edu-dates {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--accent-muted);
-    letter-spacing: 0.05em;
-  }
-
-  .edu-note {
-    font-size: 0.82rem;
-    color: var(--ink-light);
-    margin-top: 6px;
-    font-style: italic;
-  }
-
-  /* ── SKILLS ── */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid var(--rule);
-  }
-
-  .skill-group {
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--rule);
-    border-right: 1px solid var(--rule);
-  }
-
-  .skill-group:nth-child(even) { border-right: none; }
-  .skill-group:nth-last-child(-n+2) { border-bottom: none; }
-
-  .skill-group-name {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 10px;
-  }
-
-  .skill-group p {
-    font-size: 0.82rem;
-    line-height: 1.7;
-    color: var(--ink-light);
-  }
-
-  /* ── PUBLICATIONS ── */
-  .pub-item {
-    margin-bottom: 20px;
-    padding: 18px 20px;
-    background: var(--paper-warm);
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--rule);
-    transition: border-left-color 0.2s;
-  }
-
-  .pub-item:hover { border-left-color: var(--accent); }
-
-  .pub-authors {
-    font-size: 0.78rem;
-    color: var(--ink-light);
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .pub-authors strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .pub-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--ink);
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-
-  .pub-venue {
-    font-size: 0.75rem;
-    color: var(--accent-muted);
-    font-family: 'IBM Plex Mono', monospace;
-  }
-
-  .pub-venue a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .pub-venue a:hover { text-decoration: underline; }
-
-  /* ── SECTION: service, honors ── */
-  .simple-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .simple-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--rule);
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: var(--ink-light);
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  .simple-list li:last-child { border-bottom: none; }
-
-  .list-year {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--accent-muted);
-    flex-shrink: 0;
-    padding-top: 2px;
-  }
-
-  /* ── TAG ── */
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-  }
-
-  .tag {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.05em;
-    padding: 4px 10px;
-    background: var(--paper-warm);
-    border: 1px solid var(--rule);
-    color: var(--ink-light);
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent-muted);
-    letter-spacing: 0.08em;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero, section {
-    animation: fadeUp 0.6s ease both;
-  }
-
-  section:nth-child(2) { animation-delay: 0.05s; }
-  section:nth-child(3) { animation-delay: 0.10s; }
-  section:nth-child(4) { animation-delay: 0.15s; }
-  section:nth-child(5) { animation-delay: 0.20s; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 960px) {
-    body { flex-direction: column; }
-    .sidebar {
-      width: 100%;
-      min-width: unset;
-      height: auto;
-      position: static;
-      padding: 32px 24px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .sidebar-nav { display: none; }
-    .main { padding: 40px 24px; }
-    .hero h1 { font-size: 2.6rem; }
-    .interests-grid { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .exp-item { grid-template-columns: 1fr; gap: 8px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- SIDEBAR -->
 <aside class="sidebar">
   <div>
-    <div class="sidebar-name">Travis Beckwith, Ph.D.</div>
+    <a href="index.html" class="sidebar-name">Travis Beckwith, Ph.D.</a>
     <div class="sidebar-title">Neuroimaging Scientist</div>
   </div>
+
+  <nav class="sidebar-pages">
+    <a href="index.html" class="active">CV</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <div class="sidebar-contact">
     <div class="contact-row">
@@ -637,10 +93,9 @@
       <h2>Professional Summary</h2>
       <div class="section-rule"></div>
     </div>
-    <p style="font-size:0.92rem; line-height:1.85; color:var(--ink-light);">
+    <p class="prose">
       Principal neuroimaging analyst for three NIH-funded longitudinal cohorts, providing technical expertise in fMRI, DTI, MRS, and volumetric analysis across interdisciplinary research teams. Certified Siemens 3T Prisma scanner operator with hands-on experience in data acquisition, protocol implementation, and quality assurance. Proficient in FSL, AFNI, FreeSurfer, SPM, and fMRIPrep, with demonstrated experience deploying containerized workflows on SLURM-based HPC infrastructure and managing BIDS-formatted datasets. Currently applying domain expertise to AI model development, with growing familiarity in machine learning and deep-learning approaches.
     </p>
-
     <div class="tag-row">
       <span class="tag">fMRI</span>
       <span class="tag">DTI</span>
@@ -805,7 +260,7 @@
     </div>
 
     <div style="margin-top:28px;">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Additional Training</div>
+      <span class="sub-label">Additional Training</span>
 
       <div class="edu-item">
         <div class="edu-degree">Post-Baccalaureate Certificate — Clinical and Translational Research</div>
@@ -870,7 +325,7 @@
       <div class="section-rule"></div>
     </div>
 
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Peer-Reviewed Journals</div>
+    <span class="sub-label">Peer-Reviewed Journals</span>
 
     <div class="pub-item">
       <div class="pub-authors"><strong>Beckwith, T.J.</strong>, Dietrich, K.N., Wright, J.P., Altaye, M. and Cecil, K.M.</div>
@@ -938,7 +393,7 @@
       <div class="pub-venue">Stress 12 (3), 250–8 (2009) &nbsp;·&nbsp; <a href="https://doi.org/10.1080/10253890802367265" target="_blank">DOI</a></div>
     </div>
 
-    <div style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Book Chapters &amp; Reviews</div>
+    <div style="margin-top:28px;"><span class="sub-label">Book Chapters &amp; Reviews</span></div>
 
     <div class="pub-item">
       <div class="pub-authors">Cecil, K.M., <strong>Beckwith, T.J.</strong></div>
@@ -958,7 +413,7 @@
       <div class="pub-venue">Journal of Pediatric Neuroradiology 2 (1), 3–15 (2013) &nbsp;·&nbsp; <a href="https://doi.org/10.3233/PNR-13043" target="_blank">DOI</a></div>
     </div>
 
-    <div style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Manuscripts in Preparation</div>
+    <div style="margin-top:28px;"><span class="sub-label">Manuscripts in Preparation</span></div>
     <div class="pub-item">
       <div class="pub-authors"><strong>Beckwith, T.</strong>, Nowak, M., Kawata, K.</div>
       <div class="pub-title">Role of ADHD Diagnosis on Working Memory Before and After Repetitive Subconcussive Head Impacts: A Pilot Study</div>
@@ -1079,7 +534,7 @@
       <div class="section-rule"></div>
     </div>
 
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Grant Review</div>
+    <span class="sub-label">Grant Review</span>
     <ul class="simple-list" style="margin-bottom:24px;">
       <li>
         <span>Pilot Project Program Reviewer, Center for Integrative Environmental Health Sciences (CIEHS) | NIEHS P30, University of Louisville</span>
@@ -1091,13 +546,13 @@
       </li>
     </ul>
 
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Ad Hoc Manuscript Reviewer</div>
-    <div style="font-size:0.85rem;color:var(--ink-light);line-height:1.9;">
+    <span class="sub-label">Ad Hoc Manuscript Reviewer</span>
+    <p style="font-size:0.85rem;color:var(--ink-light);line-height:1.9;margin-bottom:24px;">
       Environment International &nbsp;·&nbsp; NeuroImage &nbsp;·&nbsp; Physiology &amp; Behavior &nbsp;·&nbsp; Psychiatry Research: Neuroimaging &nbsp;·&nbsp; The Lancet Planetary Health
-    </div>
+    </p>
 
-    <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Professional Affiliations</div>
-    <div style="font-size:0.85rem;color:var(--ink-light);">Indiana Academy of Science &nbsp;·&nbsp; Society for Neuroscience</div>
+    <span class="sub-label">Professional Affiliations</span>
+    <p style="font-size:0.85rem;color:var(--ink-light);">Indiana Academy of Science &nbsp;·&nbsp; Society for Neuroscience</p>
   </section>
 
   <footer>
@@ -1108,7 +563,7 @@
 </main>
 
 <script>
-  // Active nav highlighting
+  // Active section nav highlighting on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.sidebar-nav a');
 

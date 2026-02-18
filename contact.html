@@ -1,27 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact - My GitHub Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Travis Beckwith, Ph.D.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Contact Me</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <main>
-            <h2>Contact Information</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Social Media: @yourhandle</p>
-        </main>
-        <footer>
-            <p>© 2024 Your Name</p>
-        </footer>
+
+<aside class="sidebar">
+  <div>
+    <a href="index.html" class="sidebar-name">Travis Beckwith, Ph.D.</a>
+    <div class="sidebar-title">Neuroimaging Scientist</div>
+  </div>
+
+  <nav class="sidebar-pages">
+    <a href="index.html">CV</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <div class="sidebar-contact">
+    <div class="contact-row">
+      <span class="contact-icon">✉</span>
+      <a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a>
     </div>
+    <div class="contact-row">
+      <span class="contact-icon">◎</span>
+      <a href="https://orcid.org/0000-0001-6128-8464" target="_blank">ORCID</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">⌁</span>
+      <a href="https://scholar.google.com/citations?user=wolY848AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">in</span>
+      <a href="https://www.linkedin.com/in/travis-beckwith-phd" target="_blank">LinkedIn</a>
+    </div>
+    <div class="contact-row" style="margin-top:6px;">
+      <span class="contact-icon">◌</span>
+      <span>Bloomington, IN 47408</span>
+    </div>
+  </div>
+
+  <div class="sidebar-metrics">
+    <div class="metric">
+      <span class="metric-val">370</span>
+      <span class="metric-lbl">Citations</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">10</span>
+      <span class="metric-lbl">h-index</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">11</span>
+      <span class="metric-lbl">Papers</span>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Get in Touch</div>
+    <h1>Contact</h1>
+    <p class="hero-summary">I'm open to research collaborations, consulting engagements, and conversations about neuroimaging, AI, or anything in between.</p>
+  </div>
+
+  <!-- DIRECT LINKS -->
+  <section>
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Find Me Online</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="link-cards">
+      <a class="link-card" href="mailto:travis.beckwith@gmail.com">
+        <span class="link-card-icon">✉</span>
+        <div>
+          <div class="link-card-label">Email</div>
+          <div class="link-card-text">travis.beckwith@gmail.com</div>
+        </div>
+      </a>
+      <a class="link-card" href="https://www.linkedin.com/in/travis-beckwith-phd" target="_blank">
+        <span class="link-card-icon">💼</span>
+        <div>
+          <div class="link-card-label">LinkedIn</div>
+          <div class="link-card-text">linkedin.com/in/travis-beckwith-phd</div>
+        </div>
+      </a>
+      <a class="link-card" href="https://scholar.google.com/citations?user=wolY848AAAAJ&hl=en" target="_blank">
+        <span class="link-card-icon">📚</span>
+        <div>
+          <div class="link-card-label">Google Scholar</div>
+          <div class="link-card-text">370 citations · h-index 10</div>
+        </div>
+      </a>
+      <a class="link-card" href="https://orcid.org/0000-0001-6128-8464" target="_blank">
+        <span class="link-card-icon">◎</span>
+        <div>
+          <div class="link-card-label">ORCID</div>
+          <div class="link-card-text">0000-0001-6128-8464</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section>
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Send a Message</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p style="font-size:0.85rem;color:var(--ink-light);margin-bottom:28px;line-height:1.7;">
+      Use the form below and it will open a pre-filled email in your mail client — no server required.
+    </p>
+
+    <div id="contact-form">
+      <div class="contact-grid">
+        <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label for="femail">Your Email</label>
+          <input type="email" id="femail" placeholder="jane@example.com">
+        </div>
+        <div class="form-group full">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" placeholder="Research collaboration, consulting inquiry, etc.">
+        </div>
+        <div class="form-group full">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" placeholder="Tell me about your project or question..."></textarea>
+        </div>
+      </div>
+      <button class="btn" onclick="sendMail()">Send via Email Client</button>
+    </div>
+
+    <div id="form-confirm" style="display:none; margin-top:24px; padding:20px; background:var(--paper-warm); border:1px solid var(--rule); border-left:3px solid var(--accent);">
+      <p style="font-size:0.88rem; color:var(--ink-light);">Your mail client should now be open with a pre-filled message. If nothing happened, you can email directly at <a href="mailto:travis.beckwith@gmail.com" style="color:var(--accent);">travis.beckwith@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section>
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Open To</h2>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="simple-list">
+      <li><span>Research collaborations in neuroimaging, environmental health, or neurotrauma</span></li>
+      <li><span>Neuroimaging pipeline consulting and implementation</span></li>
+      <li><span>AI/ML applications in neuroscience and biomedical research</span></li>
+      <li><span>Scientific writing, methodology review, and grant consultation</span></li>
+      <li><span>Speaking or seminar invitations</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Travis Beckwith, Ph.D. — Neuroimaging Scientist</span>
+    <span>Bloomington, IN &nbsp;·&nbsp; Updated February 2026</span>
+  </footer>
+
+</main>
+
+<script>
+function sendMail() {
+  const name    = document.getElementById('fname').value.trim();
+  const email   = document.getElementById('femail').value.trim();
+  const subject = document.getElementById('fsubject').value.trim() || 'Message from your website';
+  const message = document.getElementById('fmessage').value.trim();
+
+  const body = [
+    message,
+    '',
+    '---',
+    `From: ${name || 'Website visitor'}${email ? ' <' + email + '>' : ''}`
+  ].join('\n');
+
+  const mailto = `mailto:travis.beckwith@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+
+  document.getElementById('form-confirm').style.display = 'block';
+}
+</script>
+
 </body>
 </html>
