@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- SIDEBAR -->
 <aside class="sidebar">
   <div>
     <a href="index.html" class="sidebar-name">Travis Beckwith, Ph.D.</a>
@@ -39,11 +40,25 @@
       <span class="contact-icon">in</span>
       <a href="https://www.linkedin.com/in/travis-beckwith-phd" target="_blank">LinkedIn</a>
     </div>
-    <div class="contact-row" style="margin-top:6px;">
+    <div class="contact-row">
+      <span class="contact-icon">⟨⟩</span>
+      <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>
+    </div>
+    <div class="contact-row">
       <span class="contact-icon">◌</span>
       <span>Bloomington, IN 47408</span>
     </div>
   </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-label">On this page</div>
+    <a href="#background">Background</a>
+    <a href="#research">Research</a>
+    <a href="#tools">Tools &amp; Methods</a>
+    <a href="#current">Current Work</a>
+    <a href="#media">In the Media</a>
+    <a href="#connect">Connect</a>
+  </nav>
 
   <div class="sidebar-metrics">
     <div class="metric">
@@ -61,79 +76,216 @@
   </div>
 </aside>
 
+<!-- MAIN CONTENT -->
 <main class="main">
 
+  <!-- HERO -->
   <div class="hero">
-    <div class="hero-eyebrow">About Me</div>
-    <h1>The scientist<br><em style="font-weight:400;">behind the work</em></h1>
-    <p class="hero-summary">I'm a neuroimaging scientist who has spent 15+ years building the pipelines and analysis infrastructure that turn raw MRI data into publishable science — across environmental health, clinical, and neurotrauma research.</p>
+    <div class="hero-eyebrow">About</div>
+    <h1>About<br>Me</h1>
+    <p class="hero-summary">Neuroimaging scientist building reproducible analysis pipelines and open-source tools that bridge raw scanner data and scientific discovery.</p>
   </div>
 
-  <section>
+  <!-- BACKGROUND -->
+  <section id="background">
     <div class="section-header">
       <span class="section-num">01</span>
       <h2>Background</h2>
       <div class="section-rule"></div>
     </div>
-    <div class="prose">
-      <p>My career in neuroscience began at Bowling Green State University, where I completed a dual degree in Psychology &amp; Neuroscience and Creative Writing &amp; English — a combination that has quietly shaped how I communicate science ever since. I went on to earn my Ph.D. in Neuroscience from the University of Cincinnati, where my dissertation focused on the lasting effects of childhood lead exposure on adult brain structure using multimodal MRI.</p>
-      <p>What drew me to neuroimaging wasn't just the technology — it was the idea that you could hold a brain scan and see the fingerprints of someone's environment, their history, their exposures. That conviction has carried through every project I've worked on, from childhood air pollution cohorts to sports concussion research.</p>
-      <p>Over the years I've built and maintained analysis pipelines for three concurrent NIH-funded longitudinal studies, trained graduate students, reviewed manuscripts for journals ranging from <em>NeuroImage</em> to <em>The Lancet Planetary Health</em>, and contributed to over a dozen conference presentations. More recently, I've been applying that scientific grounding to AI model development — helping build better reasoning in large language models by bringing domain expertise from neuroscience and biomedical research.</p>
-    </div>
+    <p class="prose">
+      I'm a neuroimaging scientist with over 15 years of experience developing multimodal MRI analysis pipelines in academic research settings. My career has been built around a consistent problem: how to get from raw scanner data to reliable, interpretable scientific findings — and how to make that process reproducible, well-documented, and accessible to research teams that need imaging expertise but don't always have it in-house.
+    </p>
+    <p class="prose">
+      I earned my Ph.D. in Neuroscience from the University of Cincinnati College of Medicine, where my dissertation used multimodal MRI to investigate the long-term brain consequences of childhood lead exposure. That work established the methodological foundation I've built on ever since — structural volumetrics, diffusion imaging, spectroscopy, and the pipeline engineering needed to apply these methods consistently across large cohorts.
+    </p>
+    <p class="prose">
+      Before graduate school, I studied psychology and neuroscience alongside creative writing at Bowling Green State University, where I worked in an affective neuroscience lab studying emotional processing and social behavior in rodent models. That combination — quantitative methods and clear communication — has shaped how I approach both analysis and scientific writing throughout my career.
+    </p>
   </section>
 
-  <section>
+  <!-- RESEARCH -->
+  <section id="research">
     <div class="section-header">
       <span class="section-num">02</span>
-      <h2>Approach to Research</h2>
+      <h2>Research</h2>
       <div class="section-rule"></div>
     </div>
-    <div class="interests-grid">
+    <p class="prose">
+      My research has centered on understanding how environmental exposures and neurotrauma affect brain structure, connectivity, and behavior — with a methodological core in developing the imaging pipelines that make those investigations possible.
+    </p>
+
+    <div class="interests-grid" style="margin-top:24px;">
       <div class="interest-card">
-        <h3>Rigor &amp; Reproducibility</h3>
-        <p>I build pipelines with documentation, QC checkpoints, and version control from the start — not as an afterthought.</p>
+        <h3>Environmental Health &amp; the Brain</h3>
+        <p>As the principal neuroimaging analyst for three concurrent NIH-funded longitudinal cohorts at the University of Cincinnati, I developed and implemented multimodal analysis pipelines for studying the effects of childhood lead exposure and traffic-related air pollution on brain development. This work produced six peer-reviewed publications, including a first-author study demonstrating reduced cortical thickness associated with early-life air pollution exposure — findings that received international media coverage from Reuters, the Daily Mail, and numerous scientific outlets.</p>
       </div>
       <div class="interest-card">
-        <h3>Methodological Breadth</h3>
-        <p>Working across fMRI, DTI, MRS, and volumetric analysis has made me a generalist who can speak fluently across imaging domains.</p>
+        <h3>Neurotrauma</h3>
+        <p>At Indiana University, I developed task-based fMRI analysis pipelines to investigate cognitive outcomes following repetitive subconcussive head impacts in collegiate athletes. This work examined how ADHD diagnosis moderates working memory performance in the context of sports-related brain injury, contributing to the growing understanding of individual vulnerability factors in neurotrauma research.</p>
       </div>
       <div class="interest-card">
-        <h3>Translational Focus</h3>
-        <p>The goal is always to connect technical pipeline work to real scientific questions — and to communicate those findings clearly.</p>
+        <h3>Clinical Neuroscience</h3>
+        <p>Across my postdoctoral training, I provided neuroimaging analysis expertise for studies spanning binge eating disorder, childhood-onset systemic lupus erythematosus, pediatric brain tumors, and stress neurobiology — developing and adapting analysis approaches to meet the specific methodological requirements of each clinical question.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- TOOLS & METHODS -->
+  <section id="tools">
     <div class="section-header">
       <span class="section-num">03</span>
-      <h2>Outside the Lab</h2>
+      <h2>Tools &amp; Methods</h2>
       <div class="section-rule"></div>
     </div>
-    <div class="prose">
-      <p>My B.F.A. in Creative Writing isn't just a footnote — writing has always been how I process and communicate ideas. Whether drafting a methods section, a manuscript, or a grant narrative, I care about clarity and precision in language as much as in analysis.</p>
-      <p>I'm based in Bloomington, Indiana, home to Indiana University and a vibrant research community I'm glad to be part of.</p>
+    <p class="prose">
+      Alongside my research, I've increasingly focused on building tools that address practical problems in the neuroimaging workflow — from assessing whether your hardware can handle the processing, to converting raw data into community-standard formats, to running advanced diffusion analysis with modern methods. Each tool is designed for real research environments, with features like checkpoint-based resumption, parallel processing, dry-run modes, and comprehensive quality control reporting.
+    </p>
+
+    <div class="interests-grid" style="margin-top:24px;">
+      <div class="interest-card">
+        <h3>Integrated DTI Processing Pipeline</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v1.5-ml-enhanced</p>
+        <p>My most substantial tool — an end-to-end diffusion MRI processing pipeline that integrates ML-enhanced registration (SynthMorph, VoxelMorph, ANTs with automatic method selection and GPU acceleration), CSD-based tractography with SIFT2 biological filtering, atlas-based structural connectome construction with four weighting schemes, and NODDI microstructure modeling. Built for BIDS-formatted datasets with checkpoint-based resumption and comprehensive automated QC reporting.</p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/DTI_ML_project" target="_blank">GitHub Repository →</a></p>
+      </div>
+
+      <div class="interest-card">
+        <h3>bids-convert</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python</p>
+        <p>A configurable DICOM-to-BIDS conversion tool supporting multi-modal neuroimaging data across anatomical, functional, diffusion, fieldmap, perfusion, and PET modalities. Features user-editable pattern-matching configuration, parallel conversion, source data archival with safe deletion, JSON sidecar metadata enrichment, and full BIDS scaffold generation — designed to bridge the gap between scanner output and pipeline-ready datasets.</p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/BIDS_convert" target="_blank">GitHub Repository →</a></p>
+      </div>
+
+      <div class="interest-card">
+        <h3>Neuro-Hardware Check</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; WSL2 optimized</p>
+        <p>A lightweight diagnostic utility that helps neuroimaging researchers assess whether their hardware can handle intensive MRI processing pipelines. Benchmarks RAM, disk I/O, and GPU/CUDA availability against neuroimaging workload requirements, with WSL2-specific resource verification and interpretive output mapping results to specific processing capabilities.</p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/System_Assess" target="_blank">GitHub Repository →</a></p>
+      </div>
     </div>
+
+    <p class="prose" style="margin-top:24px;">
+      All tools are published with comprehensive documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>. I'm currently preparing a methods paper describing the DTI pipeline for peer-reviewed publication.
+    </p>
   </section>
 
-  <section>
+  <!-- CURRENT WORK -->
+  <section id="current">
     <div class="section-header">
       <span class="section-num">04</span>
-      <h2>Currently</h2>
+      <h2>Current Work</h2>
       <div class="section-rule"></div>
     </div>
-    <div class="prose">
-      <p>I'm actively advising MetaBrain Labs on research methodology for an AI-powered cognitive performance platform, and contributing as a Subject Matter Expert in neuroscience and biomedical sciences to AI model training at Outlier AI, where I've reached "Oracle" contributor status.</p>
-      <p>I'm open to new opportunities in neuroimaging research, scientific consulting, and AI/ML applications in neuroscience. Feel free to <a href="contact.html" style="color:var(--accent);">get in touch</a>.</p>
+    <p class="prose">
+      My work currently spans three areas:
+    </p>
+
+    <div class="interests-grid" style="margin-top:24px;">
+      <div class="interest-card">
+        <h3>AI Model Development</h3>
+        <p>As a domain expert at Outlier AI, I contribute neuroscience and biomedical sciences expertise to AI model training through content creation, quality evaluation, and multimodal training initiatives. I author expert-level scientific prompts and custom evaluation rubrics, and have achieved "Oracle" contributor status recognizing sustained high-quality performance across 10+ projects.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Neurotechnology</h3>
+        <p>I serve as Neurotechnology Adviser to MetaBrain Labs, an early-stage startup developing an AI-powered cognitive performance platform. I provide research methodology and neuroscience consultation, including leading the research design for their pilot study protocol — study design, outcome measure selection, and human subjects research considerations.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Open-Source Tool Development</h3>
+        <p>I continue developing and refining my neuroimaging software tools, with a particular focus on integrating machine learning methods into reproducible processing workflows. I'm interested in how pre-trained deep learning models can improve registration, segmentation, and quality control in imaging pipelines — and in making these approaches accessible through well-documented, well-engineered software.</p>
+      </div>
+    </div>
+
+    <p class="prose" style="margin-top:24px;">
+      I'm broadly interested in opportunities at the intersection of neuroimaging methods development, computational approaches, and brain health — whether in academic research, industry, or applied settings.
+    </p>
+  </section>
+
+  <!-- IN THE MEDIA -->
+  <section id="media">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>In the Media</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p class="prose" style="margin-bottom:20px;">
+      My 2020 first-author publication on reduced cortical thickness associated with traffic-related air pollution received international media coverage, highlighting the public health implications of early-life environmental exposures on brain development.
+    </p>
+
+    <div class="pub-item">
+      <div class="pub-title">"Heavy traffic pollution may affect kids' brain development."</div>
+      <div class="pub-venue">Linda Carroll, <strong>Reuters</strong>, January 28, 2020 &nbsp;·&nbsp; <a href="https://www.reuters.com/article/us-health-pollution-brain-development-idUSKBN1ZR2KG" target="_blank">Article →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">"Babies who live near heavily polluted roads have 'less grey matter in their brains' by the age of 12, study finds."</div>
+      <div class="pub-venue">Harry Howard, <strong>Daily Mail</strong>, January 25, 2020 &nbsp;·&nbsp; <a href="https://www.dailymail.co.uk/health/article-7924721/Babies-live-near-heavily-polluted-roads-developed-brains-age-12-study-finds.html" target="_blank">Article →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">"Pollution from traffic fumes can impair children's sight by shrinking their brains."</div>
+      <div class="pub-venue">Tom Bawden, <strong>i</strong>, January 24, 2020 &nbsp;·&nbsp; <a href="https://inews.co.uk/news/environment/pollution-early-exposure-traffic-fumes-sight-shrinking-brains-389887" target="_blank">Article →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">"MRI shows air pollution effect on kids' brain development."</div>
+      <div class="pub-venue">Wayne Forrest, <strong>AuntMinnie</strong>, January 24, 2020 &nbsp;·&nbsp; <a href="https://www.auntminnie.com/clinical-news/mri/article/15625115/mri-shows-air-pollution-effect-on-kids-brain-development" target="_blank">Article →</a></div>
+    </div>
+
+    <p style="font-size:0.78rem;color:var(--ink-light);margin-top:16px;font-style:italic;">Additional coverage appeared in PsychCentral, Deccan Herald, The London Economic, Air Quality News, Medindia, Green Car Congress, and other outlets.</p>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Connect</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p class="prose">
+      I'm always interested in connecting with researchers, engineers, and organizations working at the intersection of neuroimaging, computational methods, and brain health. Whether it's a potential collaboration, a question about my tools, or a conversation about where the field is heading — feel free to reach out.
+    </p>
+
+    <div class="interests-grid" style="margin-top:24px;">
+      <div class="interest-card">
+        <h3>Email</h3>
+        <p><a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a></p>
+      </div>
+      <div class="interest-card">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/TravisBeckwith" target="_blank">github.com/TravisBeckwith</a></p>
+      </div>
+      <div class="interest-card">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/travis-beckwith-phd" target="_blank">linkedin.com/in/travis-beckwith-phd</a></p>
+      </div>
     </div>
   </section>
 
   <footer>
     <span>Travis Beckwith, Ph.D. — Neuroimaging Scientist</span>
-    <span>Bloomington, IN &nbsp;·&nbsp; Updated February 2026</span>
+    <span>Bloomington, IN &nbsp;·&nbsp; Updated July 2025</span>
   </footer>
 
 </main>
+
+<script>
+  // Active section nav highlighting on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
 
 </body>
 </html>
