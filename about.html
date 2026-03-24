@@ -26,7 +26,7 @@
   <div class="sidebar-contact">
     <div class="contact-row">
       <span class="contact-icon">✉</span>
-      <a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#403432213629336e2225232b3729342800272d21292c6e232f2d"><span class="__cf_email__" data-cfemail="a7d3d5c6d1ced489c5c2c4ccd0ced3cfe7c0cac6cecb89c4c8ca">[email&#160;protected]</span></a>
     </div>
     <div class="contact-row">
       <span class="contact-icon">◎</span>
@@ -144,10 +144,10 @@
 
     <div class="interests-grid" style="margin-top:24px;">
       <div class="interest-card">
-        <h3>Integrated DTI Processing Pipeline</h3>
+        <h3>dwiforge</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v1.5-ml-enhanced</p>
         <p>My most substantial tool — an end-to-end diffusion MRI processing pipeline that integrates ML-enhanced registration (SynthMorph, VoxelMorph, ANTs with automatic method selection and GPU acceleration), CSD-based tractography with SIFT2 biological filtering, atlas-based structural connectome construction with four weighting schemes, and NODDI microstructure modeling. Built for BIDS-formatted datasets with checkpoint-based resumption and comprehensive automated QC reporting.</p>
-        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/DTI_ML_project" target="_blank">GitHub Repository →</a></p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/dwiforge" target="_blank">GitHub Repository →</a></p>
       </div>
 
       <div class="interest-card">
@@ -158,15 +158,15 @@
       </div>
 
       <div class="interest-card">
-        <h3>Neuro-Hardware Check</h3>
+        <h3>NeuroRig</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; WSL2 optimized</p>
         <p>A lightweight diagnostic utility that helps neuroimaging researchers assess whether their hardware can handle intensive MRI processing pipelines. Benchmarks RAM, disk I/O, and GPU/CUDA availability against neuroimaging workload requirements, with WSL2-specific resource verification and interpretive output mapping results to specific processing capabilities.</p>
-        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/System_Assess" target="_blank">GitHub Repository →</a></p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/NeuroRig" target="_blank">GitHub Repository →</a></p>
       </div>
     </div>
 
     <p class="prose" style="margin-top:24px;">
-      All tools are published with comprehensive documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>. I'm currently preparing a methods paper describing the DTI pipeline for peer-reviewed publication.
+      All tools are published with comprehensive documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>. I'm currently preparing a methods paper describing dwiforge for peer-reviewed publication.
     </p>
   </section>
 
@@ -249,7 +249,7 @@
     <div class="interests-grid" style="margin-top:24px;">
       <div class="interest-card">
         <h3>Email</h3>
-        <p><a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a></p>
+        <p><a href="/cdn-cgi/l/email-protection#b5c1c7d4c3dcc69bd7d0d6dec2dcc1ddf5d2d8d4dcd99bd6dad8"><span class="__cf_email__" data-cfemail="3f4b4d5e49564c115d5a5c5448564b577f58525e5653115c5052">[email&#160;protected]</span></a></p>
       </div>
       <div class="interest-card">
         <h3>GitHub</h3>
@@ -269,23 +269,10 @@
 
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Active section nav highlighting on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.sidebar-nav a');
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-</script>
-
-</body>
-</html>
+    entries.forE

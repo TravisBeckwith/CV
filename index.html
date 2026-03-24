@@ -26,7 +26,7 @@
   <div class="sidebar-contact">
     <div class="contact-row">
       <span class="contact-icon">✉</span>
-      <a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#0a7e786b7c637924686f69617d637e624a6d676b636624696567"><span class="__cf_email__" data-cfemail="24505645524d570a4641474f534d504c644349454d480a474b49">[email&#160;protected]</span></a>
     </div>
     <div class="contact-row">
       <span class="contact-icon">◎</span>
@@ -156,7 +156,7 @@
 
     <div class="interests-grid">
       <div class="interest-card">
-        <h3>Integrated DTI Processing Pipeline</h3>
+        <h3>dwiforge</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v1.5-ml-enhanced</p>
         <p>End-to-end diffusion MRI processing with ML-enhanced registration, CSD tractography, structural connectome construction, and NODDI microstructure modeling for BIDS-formatted datasets.</p>
         <ul class="exp-highlights" style="margin-top:10px;">
@@ -166,7 +166,7 @@
           <li>NODDI microstructure estimation (NDI, ODI, FWF) via AMICO</li>
           <li>Checkpoint-based resumption and comprehensive QC reporting (text, HTML, JSONL)</li>
         </ul>
-        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/DTI_ML_project" target="_blank">GitHub Repository →</a></p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/dwiforge" target="_blank">GitHub Repository →</a></p>
       </div>
 
       <div class="interest-card">
@@ -183,7 +183,7 @@
       </div>
 
       <div class="interest-card">
-        <h3>System Assess</h3>
+        <h3>NeuroRig</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; WSL2 optimized</p>
         <p>Lightweight diagnostic utility assessing hardware readiness for neuroimaging processing pipelines (FreeSurfer, fMRIPrep, FSL, AFNI).</p>
         <ul class="exp-highlights" style="margin-top:10px;">
@@ -191,7 +191,7 @@
           <li>WSL2-specific resource allocation verification</li>
           <li>Interpretive output with actionable recommendations mapped to neuroimaging workload requirements</li>
         </ul>
-        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/System_Assess" target="_blank">GitHub Repository →</a></p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/NeuroRig" target="_blank">GitHub Repository →</a></p>
       </div>
     </div>
   </section>
@@ -660,7 +660,7 @@
 
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Active section nav highlighting on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.sidebar-nav a');
@@ -669,14 +669,4 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-</script>
-
-</body>
-</html>
+        const active = document.
