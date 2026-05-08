@@ -63,7 +63,7 @@
 
   <div class="sidebar-metrics">
     <div class="metric">
-      <span class="metric-val">370</span>
+      <span class="metric-val">377</span>
       <span class="metric-lbl">Citations</span>
     </div>
     <div class="metric">
@@ -157,16 +157,17 @@
     <div class="interests-grid">
       <div class="interest-card">
         <h3>dwiforge</h3>
-        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v1.5-ml-enhanced</p>
-        <p>End-to-end diffusion MRI processing with ML-enhanced registration, CSD tractography, structural connectome construction, and NODDI microstructure modeling for BIDS-formatted datasets.</p>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v2</p>
+        <p>End-to-end diffusion MRI processing with DESIGNER2-based preprocessing, ML-enhanced registration, SS3T-CSD tractography, structural connectome construction, and NODDI microstructure modeling for BIDS-formatted datasets.</p>
         <ul class="exp-highlights" style="margin-top:10px;">
+          <li>DESIGNER2-based preprocessing including topup, eddy, and Rician denoising</li>
           <li>SynthMorph / VoxelMorph / ANTs registration with automatic method selection and GPU acceleration</li>
-          <li>10M-streamline CSD tractography with SIFT2 filtering and Desikan-Killiany connectomes</li>
-          <li>Four connectome weightings: streamline count, FA, length, SIFT2</li>
+          <li>10M-streamline SS3T-CSD tractography with SIFT2 filtering and Desikan-Killiany connectomes</li>
+          <li>Three connectome matrices: streamline count, mean FA, mean length</li>
           <li>NODDI microstructure estimation (NDI, ODI, FWF) via AMICO</li>
-          <li>Checkpoint-based resumption and comprehensive QC reporting (text, HTML, JSONL)</li>
+          <li>Checkpoint-based resumption and automated per-subject QC reporting (multi-page PDF with axial slice mosaics, metrics table, and connectome matrix)</li>
         </ul>
-        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/dwiforge" target="_blank">GitHub Repository →</a></p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/dwiforge" target="_blank">GitHub Repository →</a> &nbsp;·&nbsp; <a href="https://doi.org/10.5281/zenodo.20017238" target="_blank">Zenodo →</a></p>
       </div>
 
       <div class="interest-card">
@@ -226,10 +227,10 @@
       <div>
         <div class="exp-title">Neuroimaging Software Development</div>
         <ul class="exp-highlights">
-          <li>Designed and built an integrated diffusion MRI processing pipeline incorporating ML-enhanced registration (SynthMorph, VoxelMorph, ANTs), CSD tractography, SIFT2 filtering, connectome construction, and NODDI microstructure modeling.</li>
+          <li>Designed and built an integrated diffusion MRI processing pipeline incorporating DESIGNER2-based preprocessing, ML-enhanced registration (SynthMorph, VoxelMorph, ANTs), SS3T-CSD tractography, SIFT2 filtering, connectome construction, and NODDI microstructure modeling.</li>
           <li>Developed a configurable multi-modal DICOM-to-BIDS conversion tool with parallel processing, source archival, metadata enrichment, and full BIDS scaffold generation.</li>
           <li>Built a Python hardware diagnostic utility for neuroimaging computing environments with WSL2-specific support.</li>
-          <li>Published all tools with comprehensive documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>.</li>
+          <li>Published all tools with comprehensive documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a> and archived on <a href="https://doi.org/10.5281/zenodo.20017238" target="_blank">Zenodo</a>.</li>
         </ul>
       </div>
     </div>
@@ -371,7 +372,7 @@
     <div class="skills-grid">
       <div class="skill-group">
         <div class="skill-group-name">Neuroimaging Platforms</div>
-        <p>FSL (incl. MELODIC) · MRtrix3 · AFNI · SPM (incl. CAT12) · FreeSurfer · ANTs · fMRIPrep · AMICO · CONN · ImageJ</p>
+        <p>FSL (incl. MELODIC) · MRtrix3 · DESIGNER2 · AFNI · SPM (incl. CAT12) · FreeSurfer · ANTs · fMRIPrep · AMICO · CONN · ImageJ</p>
       </div>
       <div class="skill-group">
         <div class="skill-group-name">Modalities</div>
@@ -379,7 +380,7 @@
       </div>
       <div class="skill-group">
         <div class="skill-group-name">Analysis Methods</div>
-        <p>CSD tractography (multi-tissue, single- &amp; multi-shell) · SIFT2 streamline filtering · NODDI estimation (NDI, ODI, FWF) · Atlas-based connectome construction · Multi-weighted connectivity matrices · Cortical thickness &amp; surface area · Volumetric segmentation · Resting-state connectivity (ICA) · Brain-behavior correlation · Longitudinal progression tracking</p>
+        <p>SS3T-CSD tractography (multi-tissue, single- &amp; multi-shell) · SIFT2 streamline filtering · NODDI estimation (NDI, ODI, FWF) · Atlas-based connectome construction · Multi-weighted connectivity matrices (streamline count, FA, length) · Cortical thickness &amp; surface area · Volumetric segmentation · Resting-state connectivity (ICA) · Brain-behavior correlation · Longitudinal progression tracking</p>
       </div>
       <div class="skill-group">
         <div class="skill-group-name">Programming &amp; Scripting</div>
