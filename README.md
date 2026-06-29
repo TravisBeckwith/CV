@@ -26,3 +26,4 @@ This repository contains the source for my personal CV website, covering my rese
 - 🔗 [ORCID](https://orcid.org/0000-0001-6128-8464)
 - 📚 [Google Scholar](https://scholar.google.com/citations?user=wolY848AAAAJ&hl=en)
 - 💼 [LinkedIn](https://www.linkedin.com/in/travis-beckwith-phd)
+- 🔬 [ResearchGate](https://www.researchgate.net/profile/Travis-Beckwith)
