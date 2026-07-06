@@ -753,3 +753,27 @@ section:nth-child(5) { animation-delay: 0.20s; }
   .hero-about { flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
   .hero-portrait { width: 160px; }
 }
+
+/* ── SIDEBAR AVATAR ── */
+.sidebar-avatar-link {
+  display: block;
+  width: 84px;
+  margin-bottom: 16px;
+}
+
+.sidebar-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--sidebar-accent);
+  background: var(--sidebar-bg);
+  display: block;
+  transition: border-color 0.3s ease, filter 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.sidebar-avatar-link:hover .sidebar-avatar {
+  border-color: #fff;
+  filter: grayscale(0%);
+}
