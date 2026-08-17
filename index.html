@@ -169,10 +169,22 @@
       <div class="section-rule"></div>
     </div>
     <p class="prose" style="margin-bottom:28px;">
-      Open-source neuroimaging tools spanning the research workflow from hardware validation through data conversion to advanced diffusion analysis. All projects published with documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>.
+      Open-source neuroimaging tools and original methodology spanning the research workflow from hardware validation through data conversion to advanced diffusion analysis. All projects published with documentation on <a href="https://github.com/TravisBeckwith" target="_blank">GitHub</a>.
     </p>
 
     <div class="interests-grid">
+      <div class="interest-card">
+        <h3>SMILD</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; Novel methodology</p>
+        <p>Standard Model Inter-branch Likelihood Distance — a voxelwise reliability framework addressing the parameter-estimation degeneracy in diffusion MRI's Standard Model, where two structurally different biophysical solutions (NODDI, SMT, WMTI) can explain the same signal equally well.</p>
+        <ul class="exp-highlights" style="margin-top:10px;">
+          <li>Estimation theory derived against primary literature (Jelescu, Novikov) to make the degeneracy explicit and quantifiable rather than treating it as noise</li>
+          <li>Proof-of-concept validated against three falsifiable predictions on synthetic ground-truth data — all passing</li>
+          <li>Production two-branch solver (RotInv/LEMONADE-based) and validation against the ABCD Study multi-shell dMRI cohort in active development</li>
+        </ul>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/SMILD" target="_blank">GitHub Repository →</a> &nbsp;·&nbsp; <a href="https://doi.org/10.5281/zenodo.21346103" target="_blank">Zenodo →</a></p>
+      </div>
+
       <div class="interest-card">
         <h3>dwiforge</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python &nbsp;·&nbsp; v2</p>
@@ -186,6 +198,25 @@
           <li>Configurable multi-drive storage architecture for HPC and local environments including WSL2</li>
         </ul>
         <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/dwiforge" target="_blank">GitHub Repository →</a> &nbsp;·&nbsp; <a href="https://doi.org/10.5281/zenodo.20017238" target="_blank">Zenodo →</a></p>
+      </div>
+
+      <div class="interest-card">
+        <h3>QSI-extract</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; Tested &amp; CI-validated</p>
+        <p>Collates diffusion MRI scalars (NODDI, DTI, tractometry) from QSIPrep/QSIRecon derivative trees into tidy, longitudinal tables — BIDS-aware, with NODDI assumption auditing and QC-flag propagation across pipeline versions.</p>
+        <ul class="exp-highlights" style="margin-top:10px;">
+          <li>NODDI model-fitting assumption auditing with infant-tissue awareness</li>
+          <li>QC propagation across QSIPrep/QSIRecon version changes</li>
+          <li>Full pytest suite with continuous integration across four Python versions (3.9–3.12)</li>
+        </ul>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/QSI-extract" target="_blank">GitHub Repository →</a> &nbsp;·&nbsp; <a href="https://doi.org/10.5281/zenodo.21224834" target="_blank">Zenodo →</a></p>
+      </div>
+
+      <div class="interest-card">
+        <h3>fsglean</h3>
+        <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python</p>
+        <p>BIDS-aware extraction of FreeSurfer stats files into tidy, longitudinal tables — built for the same cohort-scale, multi-timepoint data structures used across NIH-funded longitudinal studies.</p>
+        <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/fsglean" target="_blank">GitHub Repository →</a></p>
       </div>
 
       <div class="interest-card">
@@ -255,7 +286,7 @@
           <li>Design frontier-level adversarial prompts targeting model failure in neuroscience, biology, clinical medicine, pharmacology, and broader STEM domains; validate failure modes and generate evaluation rubrics specifying reward criteria and accuracy standards.</li>
           <li>Test agentic AI systems for domain knowledge failures and reasoning errors across multi-step tasks in neuroscience and biomedical contexts.</li>
           <li>Review AI model outputs and contributor-generated content for scientific accuracy, providing task-level feedback to quality managers.</li>
-          <li>Achieved "Oracle" contributor status recognizing sustained high-quality performance across 10+ projects over a 14-month tenure.</li>
+          <li>Achieved "Oracle" contributor status recognizing sustained high-quality performance across 20+ codenamed research projects over a 14-month tenure, including multi-phase evaluation workstreams (factuality arbitration, side-by-side quality evaluation) and major individual engagements.</li>
         </ul>
       </div>
     </div>
