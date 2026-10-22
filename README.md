@@ -6,7 +6,7 @@ Personal CV website for a senior research scientist with 15+ years in neuroimagi
 
 ## Stack
 
-Single-file HTML/CSS/JS — no build step, no dependencies.
+Static HTML/CSS/JS (index, about, and contact pages plus one stylesheet). No build step.
 
 ## Contact
 

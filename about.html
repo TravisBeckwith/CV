@@ -27,7 +27,7 @@
   <div class="sidebar-contact">
     <div class="contact-row">
       <span class="contact-icon">✉</span>
-      <a href="/cdn-cgi/l/email-protection#403432213629336e2225232b3729342800272d21292c6e232f2d"><span class="__cf_email__" data-cfemail="a7d3d5c6d1ced489c5c2c4ccd0ced3cfe7c0cac6cecb89c4c8ca">[email&#160;protected]</span></a>
+      <a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a>
     </div>
     <div class="contact-row">
       <span class="contact-icon">◎</span>
@@ -67,7 +67,7 @@
 
   <div class="sidebar-metrics">
     <div class="metric">
-      <span class="metric-val">397</span>
+      <span class="metric-val">399</span>
       <span class="metric-lbl">Citations</span>
     </div>
     <div class="metric">
@@ -160,7 +160,7 @@
       <div class="interest-card">
         <h3>SMILD</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Python &nbsp;·&nbsp; Novel methodology</p>
-        <p>My most theoretically original contribution — a voxelwise reliability framework (Standard Model Inter-branch Likelihood Distance) addressing an unsolved identifiability problem in diffusion MRI's Standard Model, where distinct biophysical solutions can fit the same signal equally well. I derived the estimation theory against the primary literature and validated the proof-of-concept against three falsifiable predictions on synthetic ground-truth data. The production estimator and validation against the ABCD Study cohort are in active development.</p>
+        <p>My most theoretically original contribution — a voxelwise reliability framework (Standard Model Inter-branch Likelihood Distance) addressing an unsolved identifiability problem in diffusion MRI's Standard Model, where distinct biophysical solutions can fit the same signal equally well. I derived the estimation theory against the primary literature and validated the proof-of-concept against three falsifiable predictions on synthetic ground-truth data. A production estimator and validation against the ABCD Study cohort are planned, pending data access.</p>
         <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/SMILD" target="_blank">GitHub Repository →</a></p>
       </div>
 
@@ -188,7 +188,7 @@
       <div class="interest-card">
         <h3>bids-convert</h3>
         <p style="font-size:0.8rem;color:var(--ink-light);margin-bottom:8px;">Bash / Python</p>
-        <p>A configurable DICOM-to-BIDS conversion tool supporting multi-modal neuroimaging data across anatomical, functional, diffusion, fieldmap, perfusion, and PET modalities. Features user-editable pattern-matching configuration, parallel conversion, source data archival with safe deletion, JSON sidecar metadata enrichment, and full BIDS scaffold generation — designed to bridge the gap between scanner output and pipeline-ready datasets.</p>
+        <p>A configurable DICOM-to-BIDS conversion tool supporting eleven modalities of neuroimaging data, including anatomical, functional, diffusion, fieldmap, perfusion, and PET. Features user-editable pattern-matching configuration, parallel conversion, source data archival with safe deletion, JSON sidecar metadata enrichment, and full BIDS scaffold generation — designed to bridge the gap between scanner output and pipeline-ready datasets.</p>
         <p style="margin-top:12px;"><a href="https://github.com/TravisBeckwith/BIDS_convert" target="_blank">GitHub Repository →</a></p>
       </div>
 
@@ -219,7 +219,7 @@
     <div class="interests-grid" style="margin-top:24px;">
       <div class="interest-card">
         <h3>AI Model Development</h3>
-        <p>As a subject matter expert at Outlier AI, I contribute neuroscience and biomedical sciences expertise to AI model training through content creation, quality evaluation, and multimodal training initiatives. I author expert-level scientific prompts and custom evaluation rubrics, and have achieved "Oracle" contributor status recognizing sustained high-quality performance across 20+ codenamed research projects, including multi-phase evaluation workstreams (factuality arbitration, side-by-side quality evaluation) and major individual engagements.</p>
+        <p>As a subject matter expert at Outlier AI, I contribute neuroscience and biomedical sciences expertise to AI model training through content creation, quality evaluation, and multimodal training initiatives. I author expert-level scientific prompts and custom evaluation rubrics, and have achieved "Oracle" contributor status recognizing sustained high-quality performance across 20+ codenamed research projects and 750+ contribution hours, including multi-phase evaluation workstreams (factuality arbitration, side-by-side quality evaluation) and major individual engagements.</p>
       </div>
       <div class="interest-card">
         <h3>Neurotechnology</h3>
@@ -284,7 +284,7 @@
     <div class="interests-grid" style="margin-top:24px;">
       <div class="interest-card">
         <h3>Email</h3>
-        <p><a href="/cdn-cgi/l/email-protection#b5c1c7d4c3dcc69bd7d0d6dec2dcc1ddf5d2d8d4dcd99bd6dad8"><span class="__cf_email__" data-cfemail="3f4b4d5e49564c115d5a5c5448564b577f58525e5653115c5052">[email&#160;protected]</span></a></p>
+        <p><a href="mailto:travis.beckwith@gmail.com">travis.beckwith@gmail.com</a></p>
       </div>
       <div class="interest-card">
         <h3>GitHub</h3>
@@ -299,15 +299,28 @@
 
   <footer>
     <span>Travis Beckwith, Ph.D. — Neuroimaging Scientist</span>
-    <span>Bloomington, IN &nbsp;·&nbsp; Updated July 2026</span>
+    <span>Bloomington, IN &nbsp;·&nbsp; Updated October 2026</span>
   </footer>
 
 </main>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Active section nav highlighting on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.sidebar-nav a');
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forE
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
